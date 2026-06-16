@@ -18,7 +18,7 @@ jobs:
 	
       - run: docker run --name resume_build my_resume
 
-      - run: docker cp resume_build:/CV/CV/main.pdf ./cv/resume.pdf
+      - run: docker cp resume_build:/CV/CV/main.pdf ./resume.pdf
 
       - uses: peaceiris/actions-gh-pages@v4
         with: 
