@@ -1,0 +1,97 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+
+
+
+
+
+
+\geometry{left=2cm,right=10cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+
+
+\ifxetexorluatex
+
+  \setmainfont{Carlito}
+\else
+
+
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+  \usepackage{xcolor}
+\fi
+
+
+\definecolor{Vivid Purple}{HTML}{000000}
+\definecolor{Slate Grey}{HTML}{2E2E2E}
+\definecolor{Light Grey}{HTML}{2E2E2E}
+\colorlet{heading}{Vivid Purple}
+\colorlet{accent}{Vivid Purple}
+\colorlet{emphasis}{Slate Grey}
+\colorlet{body}{Light Grey}
+
+
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{BORIS SKODUMOV}
+
+
+
+\personalinfo{%
+
+
+  \email{skorodumov.boris.2007@gmail.com}
+
+
+  \location{Moscow, Russia}
+
+  \github{https://github.com/BorisS789}
+
+}
+
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\cvsection[page1sidebar]{Education}
+
+\cvevent{Faculty of Computer Science. Program: Computer Science and Data Analysis. A freshman bachelor's degree student}{HIGHER SCHOOL OF ECONOMICS}{2025 -- Present}{Moscow, Russia}
+
+\divider
+
+\cvevent{Erasmus University Rotterdam}{Program: Economics and business economics}{2025 -- November 2025}{Rotterdam, The Netherlands}
+
+\divider
+
+
+\cvevent{College Southwest}{Specialty: Draftsman designer}{November 2024 -- May 2024}{Moscow, Russia}
+\divider
+
+\cvsection{SKILLS}
+
+\cvskill{ English }{4}
+\cvskill{ Python }{3}
+\cvskill{ 3D Modeling (T-flex)}{3}
+\cvskill{ C++ }{3}
+
+
+
+
+
+\clearpage
+
+
+\nocite{*}
+
+
+
+\end{document}
