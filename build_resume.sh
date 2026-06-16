@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-cd ./resume
+cd ./CV
 
 pdflatex -interaction=nonstopmode main.tex
 
 if [ -f main.pdf ]; then 
-	cp main.pdf /resume/CV/main.pdf
+	cp main.pdf /CV/CV/main.pdf
 else
 	exit 1
 fi
