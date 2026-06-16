@@ -1,4 +1,4 @@
-name: Deploy PDF to GitHub Pages 
+name: Deploy PDF to GitHub Pages
 
 on:
   push:
@@ -9,23 +9,22 @@ permissions:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest 
-    
+    runs-on: ubuntu-latest
+
     steps:
-      - uses:  actions/checkout@v3
-      
-      - run:  docker build --tag my_resume . 
-	
+      - uses: actions/checkout@v3
+
+      - run: docker build --tag my_resume .
+
       - run: docker run --name resume_build my_resume
 
       - run: docker cp resume_build:/CV/CV/main.pdf ./resume.pdf
 
       - uses: peaceiris/actions-gh-pages@v4
-        with: 
-          github_token: ${{ secrets.GITHUB_TOKEN }}         
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
           keep_files: false
           destination_dir: cv
-          commit_message: "Deploy"
-    
+          commit_message: "Deploy resume.pdf"
