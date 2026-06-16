@@ -15,9 +15,9 @@ RUN apt-get update && apt-get install -y \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* 
 
-WORKDIR /resume
+WORKDIR /CV
 
-COPY resume/ ./resume/
+COPY CV/ ./CV/
 
 COPY build_resume.sh .
 
