@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
 	texlive-lang-cyrillic \
 	texlive-science \
 	cm-super \
+	texlive-bibtex-extra \
+	biber \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* 
 

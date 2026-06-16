@@ -21,7 +21,7 @@ jobs:
         run: docker run --name resume_build my_resume 
  
       - name: Copy PDF from container 
-        run: docker cp resume_build:/resume/CV/main.pdf ./main.pdf 
+        run: docker cp resume_build:/CV/main.pdf ./main.pdf 
  
       - name: Upload PDF as artifact 
         uses: actions/upload-artifact@v4
